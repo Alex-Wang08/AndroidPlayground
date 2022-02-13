@@ -16,6 +16,7 @@ import androidx.compose.ui.semantics.Role.Companion.Button
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.androidplayground.flow.FlowActivity
 import com.example.androidplayground.qrcode.QrCodeActivity
+import com.example.androidplayground.retrofit.RetrofitActivity
 import com.example.androidplayground.ui.theme.AndroidPlaygroundTheme
 
 class MainActivity : ComponentActivity() {
@@ -24,6 +25,7 @@ class MainActivity : ComponentActivity() {
 
         val flowIntent = Intent(this, FlowActivity::class.java)
         val qrCodeIntent = Intent(this, QrCodeActivity::class.java)
+        val retrofitIntent = Intent(this, RetrofitActivity::class.java)
 
         setContent {
             AndroidPlaygroundTheme {
@@ -40,6 +42,13 @@ class MainActivity : ComponentActivity() {
                         startActivity(qrCodeIntent)
                     }) {
                         Text(text = "QR Code")
+                    }
+
+                    // Retrofit
+                    Button(onClick = {
+                        startActivity(retrofitIntent)
+                    }) {
+                        Text(text = "Retrofit")
                     }
                 }
 

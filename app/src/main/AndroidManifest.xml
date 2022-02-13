@@ -3,6 +3,7 @@
     package="com.example.androidplayground">
 
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -26,6 +27,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".flow.FlowActivity" />
+        <activity
+            android:name=".retrofit.RetrofitActivity"
+            android:theme="@style/Theme.AndroidNote"
+
+            />
+
     </application>
 
 </manifest>
