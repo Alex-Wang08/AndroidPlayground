@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/layout/activity_mistake5.xml" value="0.27943840579710144" />
         <entry key="app/src/main/res/layout/activity_retrofit.xml" value="0.33958333333333335" />
+        <entry key="app/src/main/res/layout/activity_weather_report.xml" value="0.26766304347826086" />
         <entry key="app/src/main/res/layout/item_todo.xml" value="0.33958333333333335" />
       </map>
     </option>

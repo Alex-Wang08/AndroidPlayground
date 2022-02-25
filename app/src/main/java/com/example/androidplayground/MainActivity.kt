@@ -18,6 +18,7 @@ import com.example.androidplayground.flow.FlowActivity
 import com.example.androidplayground.qrcode.QrCodeActivity
 import com.example.androidplayground.retrofit.RetrofitActivity
 import com.example.androidplayground.ui.theme.AndroidPlaygroundTheme
+import com.example.androidplayground.weatherreport.WeatherReportActivity
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,6 +27,7 @@ class MainActivity : ComponentActivity() {
         val flowIntent = Intent(this, FlowActivity::class.java)
         val qrCodeIntent = Intent(this, QrCodeActivity::class.java)
         val retrofitIntent = Intent(this, RetrofitActivity::class.java)
+        val weatherReportIntent = Intent(this, WeatherReportActivity::class.java)
 
         setContent {
             AndroidPlaygroundTheme {
@@ -50,23 +52,16 @@ class MainActivity : ComponentActivity() {
                     }) {
                         Text(text = "Retrofit")
                     }
+
+                    Button(onClick = {
+                        startActivity(weatherReportIntent)
+                    }) {
+                        Text(text = "Weather Report")
+                    }
                 }
 
 
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    AndroidPlaygroundTheme {
-        Greeting("Android")
     }
 }

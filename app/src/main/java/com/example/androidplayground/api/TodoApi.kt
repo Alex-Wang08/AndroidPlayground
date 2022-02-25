@@ -1,9 +1,8 @@
-package com.example.androidplayground.retrofit
+package com.example.androidplayground.api
 
+import com.example.androidplayground.retrofit.Todo
 import retrofit2.Response
-import retrofit2.http.Body
 import retrofit2.http.GET
-import retrofit2.http.POST
 
 interface TodoApi {
     @GET("/todos")

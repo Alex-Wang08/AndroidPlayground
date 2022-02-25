@@ -1,5 +1,6 @@
 package com.example.androidplayground.retrofit
 
+import com.example.androidplayground.api.TodoApi
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
