@@ -1,6 +1,8 @@
 package com.example.androidplayground.di
 
 import com.example.androidplayground.api.WeatherApi
+import com.example.androidplayground.repository.WeatherRepository
+import com.example.androidplayground.repository.WeatherRepositoryImpl
 import com.example.androidplayground.utils.Constants
 import dagger.Module
 import dagger.Provides
@@ -25,5 +27,10 @@ object AppModule {
             .create(WeatherApi::class.java)
     }
 
+    @Provides
+    @Singleton
+    fun providesWeatherRepository(weatherApi: WeatherApi) : WeatherRepository {
+        return WeatherRepositoryImpl(weatherApi)
+    }
 
 }

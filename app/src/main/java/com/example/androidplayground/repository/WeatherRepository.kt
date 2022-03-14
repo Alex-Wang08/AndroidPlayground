@@ -5,6 +5,4 @@ import retrofit2.Response
 
 interface WeatherRepository {
     suspend fun getWeather(): Response<Weather>
-
-
 }
