@@ -24,19 +24,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".flow.FlowActivity" />
+        <activity android:name="com.example.androidplayground.activities.flow.FlowActivity" />
         <activity
-            android:name=".retrofit.RetrofitActivity"
+            android:name="com.example.androidplayground.activities.retrofit.RetrofitActivity"
             android:theme="@style/Theme.AndroidNote" />
         <activity
-            android:name=".weatherreport.WeatherReportActivity"
+            android:name="com.example.androidplayground.activities.weatherreport.WeatherReportActivity"
             android:exported="false"
             android:theme="@style/Theme.WeatherReport"/>
         <activity
-            android:name=".coroutine.Mistake5Activity"
+            android:name="com.example.androidplayground.activities.coroutine.Mistake5Activity"
             android:exported="false" />
         <activity
-            android:name=".qrcode.QrCodeActivity"
+            android:name="com.example.androidplayground.activities.qrcode.QrCodeActivity"
             android:exported="false" />
     </application>
 

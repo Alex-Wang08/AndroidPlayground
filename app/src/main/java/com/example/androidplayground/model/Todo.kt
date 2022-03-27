@@ -1,4 +1,4 @@
-package com.example.androidplayground.retrofit
+package com.example.androidplayground.model
 
 data class Todo(
     val completed: Boolean,

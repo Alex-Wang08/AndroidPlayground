@@ -1,9 +1,8 @@
-package com.example.androidplayground.weatherreport
+package com.example.androidplayground.activities.weatherreport
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
-import com.example.androidplayground.R
 import com.example.androidplayground.databinding.ActivityWeatherReportBinding
 import dagger.hilt.android.AndroidEntryPoint
 

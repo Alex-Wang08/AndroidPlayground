@@ -1,4 +1,4 @@
-package com.example.androidplayground.qrcode
+package com.example.androidplayground.activities.qrcode
 
 import android.graphics.ImageFormat
 import androidx.camera.core.ImageAnalysis

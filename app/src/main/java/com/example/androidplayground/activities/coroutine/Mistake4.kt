@@ -1,4 +1,4 @@
-package com.example.androidplayground.coroutine
+package com.example.androidplayground.activities.coroutine
 
 import kotlinx.coroutines.delay
 

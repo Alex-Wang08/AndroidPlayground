@@ -1,4 +1,4 @@
-package com.example.androidplayground.weatherreport
+package com.example.androidplayground.activities.weatherreport
 
 import android.util.Log
 import androidx.lifecycle.LiveData

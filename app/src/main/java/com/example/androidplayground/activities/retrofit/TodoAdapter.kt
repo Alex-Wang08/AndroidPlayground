@@ -1,4 +1,4 @@
-package com.example.androidplayground.retrofit
+package com.example.androidplayground.activities.retrofit
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androidplayground.databinding.ItemTodoBinding
-import java.util.zip.Inflater
+import com.example.androidplayground.model.Todo
 
 class TodoAdapter : RecyclerView.Adapter<TodoAdapter.TodoViewHolder>() {
 

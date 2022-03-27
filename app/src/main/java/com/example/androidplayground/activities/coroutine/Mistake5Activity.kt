@@ -1,11 +1,9 @@
-package com.example.androidplayground.coroutine
+package com.example.androidplayground.activities.coroutine
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.viewModels
-import androidx.lifecycle.lifecycleScope
-import kotlinx.coroutines.launch
 
 class Mistake5Activity : AppCompatActivity() {
 

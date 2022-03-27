@@ -1,4 +1,4 @@
-package com.example.androidplayground.flow
+package com.example.androidplayground.activities.flow
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

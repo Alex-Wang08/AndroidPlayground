@@ -1,6 +1,6 @@
 package com.example.androidplayground.api
 
-import com.example.androidplayground.retrofit.Todo
+import com.example.androidplayground.model.Todo
 import retrofit2.Response
 import retrofit2.http.GET
 

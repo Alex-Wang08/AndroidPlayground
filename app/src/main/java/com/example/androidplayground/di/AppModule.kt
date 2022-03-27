@@ -1,6 +1,9 @@
 package com.example.androidplayground.di
 
+import com.example.androidplayground.api.TodoApi
 import com.example.androidplayground.api.WeatherApi
+import com.example.androidplayground.repository.TodoRepository
+import com.example.androidplayground.repository.TodoRepositoryImpl
 import com.example.androidplayground.repository.WeatherRepository
 import com.example.androidplayground.repository.WeatherRepositoryImpl
 import com.example.androidplayground.utils.Constants
@@ -16,6 +19,22 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
+
+    @Provides
+    @Singleton
+    fun provideTodoRetrofitInstance(): TodoApi {
+        return Retrofit.Builder()
+            .baseUrl(Constants.BASE_URL_TODO)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(TodoApi::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideTodoRepository(todoApi: TodoApi): TodoRepository {
+        return TodoRepositoryImpl(todoApi)
+    }
 
     @Provides
     @Singleton

@@ -1,4 +1,4 @@
-package com.example.androidplayground.coroutine
+package com.example.androidplayground.activities.coroutine
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
