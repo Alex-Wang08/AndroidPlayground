@@ -1,9 +1,9 @@
 package com.example.androidplayground.di
 
 import android.content.Context
+import com.example.androidplayground.activities.spotify.remote.MusicDatabase
 import com.google.android.exoplayer2.C
 import com.google.android.exoplayer2.ExoPlayer
-import com.google.android.exoplayer2.SimpleExoPlayer
 import com.google.android.exoplayer2.audio.AudioAttributes
 import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory
 import com.google.android.exoplayer2.util.Util
@@ -20,7 +20,11 @@ object ServiceModule {
 
     @ServiceScoped
     @Provides
-    fun provideAudioAttributes() = AudioAttributes.Builder()
+    fun provideMusicDatabase() = MusicDatabase()
+
+    @ServiceScoped
+    @Provides
+    fun provideAudioAttributes() : AudioAttributes = AudioAttributes.Builder()
         .setContentType(C.CONTENT_TYPE_MUSIC)
         .setUsage(C.USAGE_MEDIA)
         .build()
@@ -30,7 +34,7 @@ object ServiceModule {
     fun provideExoPlayer(
         @ApplicationContext context: Context,
         audioAttributes: AudioAttributes
-    ) = ExoPlayer.Builder(context).build().apply {
+    ) : ExoPlayer = ExoPlayer.Builder(context).build().apply {
         setAudioAttributes(audioAttributes, true)
         setHandleAudioBecomingNoisy(true)
     }
@@ -39,5 +43,5 @@ object ServiceModule {
     @Provides
     fun provideDatasourceFactory(
         @ApplicationContext context: Context
-    ) = DefaultDataSourceFactory(context, Util.getUserAgent(context, "Spotify app"))
+    ) : DefaultDataSourceFactory = DefaultDataSourceFactory(context, Util.getUserAgent(context, "Spotify app"))
 }
