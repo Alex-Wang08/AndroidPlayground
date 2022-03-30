@@ -13,10 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidPlayground">
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
             android:theme="@style/Theme.AndroidPlayground">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,19 +24,27 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.androidplayground.activities.flow.FlowActivity" />
+        <activity android:name=".activities.flow.FlowActivity" />
+
         <activity
-            android:name="com.example.androidplayground.activities.retrofit.RetrofitActivity"
+            android:name=".activities.retrofit.RetrofitActivity"
             android:theme="@style/Theme.AndroidNote" />
+
         <activity
-            android:name="com.example.androidplayground.activities.weatherreport.WeatherReportActivity"
+            android:name=".activities.weatherreport.WeatherReportActivity"
             android:exported="false"
-            android:theme="@style/Theme.WeatherReport"/>
+            android:theme="@style/Theme.WeatherReport" />
+
         <activity
-            android:name="com.example.androidplayground.activities.coroutine.Mistake5Activity"
+            android:name=".activities.coroutine.Mistake5Activity"
             android:exported="false" />
+
         <activity
-            android:name="com.example.androidplayground.activities.qrcode.QrCodeActivity"
+            android:name=".activities.qrcode.QrCodeActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.spotify.SpotifyActivity"
             android:exported="false" />
     </application>
 

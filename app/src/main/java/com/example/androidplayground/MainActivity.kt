@@ -10,6 +10,7 @@ import androidx.compose.material.Text
 import com.example.androidplayground.activities.flow.FlowActivity
 import com.example.androidplayground.activities.qrcode.QrCodeActivity
 import com.example.androidplayground.activities.retrofit.RetrofitActivity
+import com.example.androidplayground.activities.spotify.SpotifyActivity
 import com.example.androidplayground.ui.theme.AndroidPlaygroundTheme
 import com.example.androidplayground.activities.weatherreport.WeatherReportActivity
 
@@ -21,6 +22,7 @@ class MainActivity : ComponentActivity() {
         val qrCodeIntent = Intent(this, QrCodeActivity::class.java)
         val retrofitIntent = Intent(this, RetrofitActivity::class.java)
         val weatherReportIntent = Intent(this, WeatherReportActivity::class.java)
+        val spotifyIntent = Intent(this, SpotifyActivity::class.java)
 
         setContent {
             AndroidPlaygroundTheme {
@@ -43,7 +45,7 @@ class MainActivity : ComponentActivity() {
                     Button(onClick = {
                         startActivity(retrofitIntent)
                     }) {
-                        Text(text = "Retrofit")
+                        Text(text = "Retrofit - to do list")
                     }
 
                     Button(onClick = {
@@ -51,9 +53,13 @@ class MainActivity : ComponentActivity() {
                     }) {
                         Text(text = "Weather Report")
                     }
+
+                    Button(onClick = {
+                        startActivity(spotifyIntent)
+                    }) {
+                        Text(text = "Spotify")
+                    }
                 }
-
-
             }
         }
     }
