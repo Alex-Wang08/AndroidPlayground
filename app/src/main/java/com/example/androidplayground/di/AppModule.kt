@@ -1,5 +1,10 @@
 package com.example.androidplayground.di
 
+import android.content.Context
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.bumptech.glide.request.RequestOptions
+import com.example.androidplayground.R
 import com.example.androidplayground.api.TodoApi
 import com.example.androidplayground.api.WeatherApi
 import com.example.androidplayground.repository.TodoRepository
@@ -10,6 +15,7 @@ import com.example.androidplayground.utils.Constants
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -51,5 +57,16 @@ object AppModule {
     fun providesWeatherRepository(weatherApi: WeatherApi) : WeatherRepository {
         return WeatherRepositoryImpl(weatherApi)
     }
+
+    @Provides
+    @Singleton
+    fun provideGlideInstance(
+        @ApplicationContext context: Context,
+    ) = Glide.with(context).setDefaultRequestOptions(
+        RequestOptions()
+            .placeholder(R.drawable.ic_image)
+            .error(R.drawable.ic_image)
+            .diskCacheStrategy(DiskCacheStrategy.DATA)
+    )
 
 }

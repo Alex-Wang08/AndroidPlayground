@@ -4,8 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/background.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_image.xml" value="0.2565" />
+        <entry key="app/src/main/res/drawable/ic_play.xml" value="0.2565" />
         <entry key="app/src/main/res/layout/activity_mistake5.xml" value="0.27943840579710144" />
         <entry key="app/src/main/res/layout/activity_retrofit.xml" value="0.33958333333333335" />
+        <entry key="app/src/main/res/layout/activity_spotify.xml" value="0.1651469098277609" />
         <entry key="app/src/main/res/layout/activity_weather_report.xml" value="0.26766304347826086" />
         <entry key="app/src/main/res/layout/item_todo.xml" value="0.33958333333333335" />
       </map>

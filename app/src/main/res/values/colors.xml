@@ -10,4 +10,8 @@
 
     <color name="colorPrimary">#4169E1</color>
     <color name="colorPrimaryDark">#4682B4</color>
+
+    // spotify
+    <color name="darkBackground">#202020</color>
+
 </resources>
