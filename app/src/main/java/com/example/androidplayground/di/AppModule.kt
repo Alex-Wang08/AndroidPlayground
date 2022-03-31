@@ -6,6 +6,8 @@ import com.bumptech.glide.RequestManager
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
 import com.example.androidplayground.R
+import com.example.androidplayground.activities.spotify.exoplayer.MusicService
+import com.example.androidplayground.activities.spotify.exoplayer.MusicServiceConnection
 import com.example.androidplayground.api.TodoApi
 import com.example.androidplayground.api.WeatherApi
 import com.example.androidplayground.repository.TodoRepository
@@ -63,11 +65,17 @@ object AppModule {
     @Singleton
     fun provideGlideInstance(
         @ApplicationContext context: Context,
-    )  : RequestManager = Glide.with(context).setDefaultRequestOptions(
+    ) : RequestManager = Glide.with(context).setDefaultRequestOptions(
         RequestOptions()
             .placeholder(R.drawable.ic_image)
             .error(R.drawable.ic_image)
             .diskCacheStrategy(DiskCacheStrategy.DATA)
     )
+
+    @Provides
+    @Singleton
+    fun provideMusicServiceConnection(
+        @ApplicationContext context: Context
+    ) : MusicServiceConnection = MusicServiceConnection(context)
 
 }
