@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.material.Button
 import androidx.compose.material.Text
 import com.example.androidplayground.activities.flow.FlowActivity
+import com.example.androidplayground.activities.permission.PermissionActivity
 import com.example.androidplayground.activities.qrcode.QrCodeActivity
 import com.example.androidplayground.activities.retrofit.RetrofitActivity
 import com.example.androidplayground.activities.spotify.SpotifyActivity
@@ -58,6 +59,12 @@ class MainActivity : ComponentActivity() {
                         startActivity(spotifyIntent)
                     }) {
                         Text(text = "Spotify")
+                    }
+                    
+                    Button(onClick = {
+                        startActivity(PermissionActivity.createIntent(this@MainActivity))
+                    }) {
+                        Text(text = "Permission")
                     }
                 }
             }
